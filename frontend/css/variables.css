@@ -1,0 +1,137 @@
+/* ============================================================================
+   TACTILE NEO-SKEUOMORPHIC DESIGN TOKENS (100% OFFLINE)
+   Supports Dark Mode (Default) and Light Mode
+   ============================================================================ */
+
+:root {
+  /* Physical Metal Chassis & Framing */
+  --chassis-dark: #16181d;
+  --chassis-metal: #20242d;
+  --chassis-border: #0d0f13;
+  --panel-face: #282d38;
+  --panel-bevel-light: rgba(255, 255, 255, 0.08);
+  --panel-bevel-dark: rgba(0, 0, 0, 0.65);
+  --brushed-aluminum: linear-gradient(145deg, #2f3542, #212630);
+  --brushed-steel-plate: linear-gradient(135deg, #2b303c 0%, #1c2028 100%);
+
+  /* Recessed Wells (Inset Physical Shadows for Data Entry) */
+  --well-bg: #121419;
+  --well-border: #0b0d10;
+  --well-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.8), inset -1px -1px 2px rgba(255, 255, 255, 0.04);
+  --well-focus-border: #4f8cff;
+  --well-focus-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.9), 0 0 6px rgba(79, 140, 255, 0.4);
+
+  /* Raised Mechanical Push-Buttons */
+  --btn-face: linear-gradient(180deg, #3d4554 0%, #2a303b 100%);
+  --btn-border: #161a22;
+  --btn-shadow: 0 4px 0 #101318, 0 6px 12px rgba(0, 0, 0, 0.6);
+  --btn-active-shadow: 0 1px 0 #101318, 0 2px 4px rgba(0, 0, 0, 0.6);
+
+  --btn-accent-face: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+  --btn-accent-shadow: 0 4px 0 #0f2d77, 0 6px 12px rgba(0, 0, 0, 0.6);
+
+  --btn-success-face: linear-gradient(180deg, #059669 0%, #047857 100%);
+  --btn-success-shadow: 0 4px 0 #023a2a, 0 6px 12px rgba(0, 0, 0, 0.6);
+
+  --btn-danger-face: linear-gradient(180deg, #dc2626 0%, #b91c1c 100%);
+  --btn-danger-shadow: 0 4px 0 #5f0e0e, 0 6px 12px rgba(0, 0, 0, 0.6);
+
+  /* Hardware Status LEDs (Pulsing Glow Effects) */
+  --led-amber: #ffaa00;
+  --led-amber-glow: 0 0 8px #ffaa00, 0 0 16px rgba(255, 170, 0, 0.7), inset 0 0 3px #fff;
+
+  --led-green: #00e676;
+  --led-green-glow: 0 0 8px #00e676, 0 0 16px rgba(0, 230, 118, 0.7), inset 0 0 3px #fff;
+
+  --led-red: #ff3366;
+  --led-red-glow: 0 0 8px #ff3366, 0 0 16px rgba(255, 51, 102, 0.7), inset 0 0 3px #fff;
+
+  /* Physical Folder Index Tabs (Color-Coded Sample Groups) */
+  --tab-di: #d97706;    /* Amber */
+  --tab-cmso: #059669;  /* Emerald */
+  --tab-pdt: #2563eb;   /* Cobalt */
+  --tab-uo: #7c3aed;    /* Amethyst */
+  --tab-esis: #e11d48;  /* Coral */
+
+  /* Text & Labels */
+  --text-main: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-muted: #64748b;
+  --text-highlight: #ffffff;
+  --text-accent: #60a5fa;
+
+  /* Table & Sub-surfaces */
+  --table-header-bg: #1c2029;
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --table-hover-bg: rgba(255, 255, 255, 0.03);
+
+  /* 100% Offline System Fonts */
+  --font-mono: "Cascadia Code", Consolas, "Courier New", monospace;
+  --font-ui: "Segoe UI", -apple-system, BlinkMacSystemFont, Tahoma, sans-serif;
+}
+
+/* ============================================================================
+   LIGHT THEME: CLINICAL BRUSHED METALLIC AESTHETIC
+   ============================================================================ */
+[data-theme="light"] {
+  /* Physical Metal Chassis & Framing */
+  --chassis-dark: #e8ecf2;
+  --chassis-metal: #f1f4f9;
+  --chassis-border: #cbd5e1;
+  --panel-face: #ffffff;
+  --panel-bevel-light: rgba(255, 255, 255, 0.95);
+  --panel-bevel-dark: rgba(0, 0, 0, 0.08);
+  --brushed-aluminum: linear-gradient(145deg, #ffffff, #eef2f6);
+  --brushed-steel-plate: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+
+  /* Recessed Wells (Inset Physical Shadows on Light Background) */
+  --well-bg: #ffffff;
+  --well-border: #cbd5e1;
+  --well-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.12), inset -1px -1px 2px rgba(255, 255, 255, 0.9);
+  --well-focus-border: #2563eb;
+  --well-focus-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(37, 99, 235, 0.18);
+
+  /* Raised Mechanical Push-Buttons */
+  --btn-face: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+  --btn-border: #cbd5e1;
+  --btn-shadow: 0 3px 0 #94a3b8, 0 4px 8px rgba(0, 0, 0, 0.08);
+  --btn-active-shadow: 0 1px 0 #94a3b8, 0 1px 2px rgba(0, 0, 0, 0.08);
+
+  --btn-accent-face: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+  --btn-accent-shadow: 0 3px 0 #1e40af, 0 4px 8px rgba(37, 99, 235, 0.25);
+
+  --btn-success-face: linear-gradient(180deg, #059669 0%, #047857 100%);
+  --btn-success-shadow: 0 3px 0 #065f46, 0 4px 8px rgba(5, 150, 105, 0.25);
+
+  --btn-danger-face: linear-gradient(180deg, #dc2626 0%, #b91c1c 100%);
+  --btn-danger-shadow: 0 3px 0 #991b1b, 0 4px 8px rgba(220, 38, 38, 0.25);
+
+  /* Hardware Status LEDs (Vibrant on Light Surface) */
+  --led-amber: #d97706;
+  --led-amber-glow: 0 0 8px #f59e0b, 0 0 14px rgba(245, 158, 11, 0.5), inset 0 0 2px #fff;
+
+  --led-green: #059669;
+  --led-green-glow: 0 0 8px #10b981, 0 0 14px rgba(16, 185, 129, 0.5), inset 0 0 2px #fff;
+
+  --led-red: #e11d48;
+  --led-red-glow: 0 0 8px #f43f5e, 0 0 14px rgba(244, 63, 94, 0.5), inset 0 0 2px #fff;
+
+  /* Physical Folder Index Tabs (Deep Contrast for Light Mode) */
+  --tab-di: #b45309;    /* Deep Amber */
+  --tab-cmso: #047857;  /* Deep Emerald */
+  --tab-pdt: #1d4ed8;   /* Deep Cobalt */
+  --tab-uo: #6d28d9;    /* Deep Amethyst */
+  --tab-esis: #be123c;  /* Deep Coral */
+
+  /* Text & Labels */
+  --text-main: #0f172a;
+  --text-dim: #475569;
+  --text-muted: #64748b;
+  --text-highlight: #020617;
+  --text-accent: #2563eb;
+
+  /* Table & Sub-surfaces */
+  --table-header-bg: #e2e8f0;
+  --border-subtle: #e2e8f0;
+  --table-hover-bg: rgba(0, 0, 0, 0.03);
+}

@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# SQLite Databases & Backups (Preserve user data locally)
+supply_management.db
+*.db
+*.db-wal
+*.db-shm
+.backups/
+
+# PyInstaller & Build Artifacts
+build/
+dist/
+dist_installer/
+*.manifest
+*.spec.bak
+
+# Excel Temporary & Lock Files
+~$*.xlsx
+~$*.xls
+.tmp_*
+*.tmp
+
+# IDE / Editor Configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.agents/
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.lnk
+
+# Environment Variables & Secrets
+.env
+.env.local
+*.secret

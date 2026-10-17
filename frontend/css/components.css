@@ -1,0 +1,306 @@
+/* ============================================================================
+   TACTILE NEO-SKEUOMORPHIC UI COMPONENTS
+   ============================================================================ */
+
+/* Global Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-ui);
+  background-color: var(--chassis-dark);
+  color: var(--text-main);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+/* Mechanical Push-Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--btn-face);
+  color: var(--text-main);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--btn-border);
+  box-shadow: var(--btn-shadow);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: var(--btn-active-shadow);
+}
+
+.btn-accent {
+  background: var(--btn-accent-face);
+  box-shadow: var(--btn-accent-shadow);
+  color: #ffffff;
+}
+
+.btn-success {
+  background: var(--btn-success-face);
+  box-shadow: var(--btn-success-shadow);
+  color: #ffffff;
+}
+
+.btn-danger {
+  background: var(--btn-danger-face);
+  box-shadow: var(--btn-danger-shadow);
+  color: #ffffff;
+}
+
+.btn-sm {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.btn-icon {
+  padding: 7px;
+  border-radius: 6px;
+}
+
+/* Recessed Input Wells */
+.input-well {
+  background: var(--well-bg);
+  border: 1px solid var(--well-border);
+  box-shadow: var(--well-shadow);
+  border-radius: 5px;
+  color: var(--text-highlight);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  padding: 7px 10px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+}
+
+.input-well:focus {
+  border-color: var(--well-focus-border);
+  box-shadow: var(--well-focus-shadow);
+}
+
+.input-well::placeholder {
+  color: var(--text-muted);
+}
+
+.input-well-mono {
+  font-family: var(--font-mono);
+}
+
+/* Recessed Select Dropdown */
+select.input-well {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+}
+
+/* Form Groups & Field Labels */
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+/* Hardware Status LEDs */
+.led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.led-amber {
+  background-color: var(--led-amber);
+  box-shadow: var(--led-amber-glow);
+}
+
+.led-green {
+  background-color: var(--led-green);
+  box-shadow: var(--led-green-glow);
+}
+
+.led-red {
+  background-color: var(--led-red);
+  box-shadow: var(--led-red-glow);
+  animation: pulse-red 1.5s infinite alternate;
+}
+
+@keyframes pulse-red {
+  0% { opacity: 0.8; box-shadow: 0 0 6px #ff3366; }
+  100% { opacity: 1; box-shadow: var(--led-red-glow); }
+}
+
+/* Physical Folder Index Tabs */
+.tabs-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  border-bottom: 2px solid var(--chassis-border);
+  padding: 0 12px;
+}
+
+.folder-tab {
+  background: var(--panel-face);
+  color: var(--text-dim);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 8px 18px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid var(--chassis-border);
+  border-bottom: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.12s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.folder-tab:hover {
+  background: var(--table-hover-bg, #343b49);
+  color: var(--text-main);
+}
+
+.folder-tab.active {
+  background: var(--chassis-metal);
+  color: var(--text-highlight, #ffffff);
+  transform: translateY(-2px);
+  padding-bottom: 10px;
+}
+
+.folder-tab.tab-di.active { border-top: 3px solid var(--tab-di); }
+.folder-tab.tab-cmso.active { border-top: 3px solid var(--tab-cmso); }
+.folder-tab.tab-pdt.active { border-top: 3px solid var(--tab-pdt); }
+.folder-tab.tab-uo.active { border-top: 3px solid var(--tab-uo); }
+.folder-tab.tab-esis.active { border-top: 3px solid var(--tab-esis); }
+
+/* Brushed Metal Locked Plate (Read-Only Container) */
+.locked-plate {
+  background: var(--brushed-steel-plate);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.1), 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 16px;
+}
+
+.plate-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Physical Instrument Panel */
+.instrument-panel {
+  background: var(--panel-face);
+  border-radius: 8px;
+  border: 1px solid var(--chassis-border);
+  box-shadow: inset 0 1px 0 var(--panel-bevel-light), 0 6px 16px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+}
+
+/* Modal Windows */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-chassis {
+  background: var(--chassis-metal);
+  border: 1px solid var(--panel-bevel-light);
+  border-bottom: 2px solid var(--chassis-border);
+  border-radius: 10px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  width: 90%;
+  max-width: 580px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 14px 20px;
+  background: var(--chassis-dark);
+  border-bottom: 1px solid var(--chassis-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.modal-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  padding: 14px 20px;
+  background: var(--chassis-dark);
+  border-top: 1px solid var(--chassis-border);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
